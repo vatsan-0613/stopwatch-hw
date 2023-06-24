@@ -9,7 +9,7 @@ let startTime = 0;
 
 play_btn.addEventListener("click", function () {
   if(flag){
-    play_btn.innerHTML = '<i class="fa-solid fa-solid fa-play"></i>';
+    play_btn.innerHTML = '<i class="fa-solid fa-play"></i>';
     stopInterval();
     return;
   }
@@ -32,6 +32,8 @@ play_btn.addEventListener("click", function () {
 
 reset_btn.addEventListener("click", function(){
     clearInterval(timeInterval);
+    flag = false;
+    play_btn.innerHTML = '<i class="fa-solid fa-play"></i>';
     document.querySelector("h2").textContent = "00:00:00";
     elapsedTime = 0;
 })
